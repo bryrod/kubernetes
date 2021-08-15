@@ -25,15 +25,6 @@ Contains publicly accessible data like a configmap that contains cluster informa
 $ kubectl cluster-info
 ```
 
-> Example of output
-```
-❯ kubectl cluster-info
-Kubernetes master is running at https://192.168.64.2:8443
-KubeDNS is running at https://192.168.64.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-```
-
 ### kube-node-lease
 
 Holds information about the hearbeat of nodes. Each node has an associated lease object in the namespace that determines the availability of the node.
@@ -92,6 +83,4 @@ However, grouping them is beneficial regardless. Not grouping into a namespace c
 
 Hosting development and staging in one cluster. Re-use those components in both environments, like a blue/green deployment.
 
-You can also limit access to the resources by namespaces. Teams could have their own namespace, and access is limited to them. Additionally, resources like CPU/RAM/Storage can be controlled through quotas. 
-
-## How Namespaces work and how to use it?
+You can also limit access to the resources by namespaces. Teams could have their own namespace, and access is limited to them. Additionally, resources like CPU/RAM/Storage can be controlled through quotas.
